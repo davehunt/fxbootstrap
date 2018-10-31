@@ -1,0 +1,30 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="fxbootstrap",
+    use_scm_version=True,
+    description="Bootstrap launcher for Firefox",
+    long_description=open("README.md").read(),
+    author="Dave Hunt",
+    author_email="dhunt@mozilla.com",
+    url="https://github.com/davehunt/fxbootstrap",
+    packages=find_packages(exclude=["tests"]),
+    entry_points={"console_scripts": ["fxbootstrap=fxbootstrap:cli"]},
+    install_requires=["click", "crayons", "mozdownload", "mozrunner"],
+    setup_requires=["setuptools_scm"],
+    license="Mozilla Public License 2.0 (MPL 2.0)",
+    keywords="firefox test profile launch download install mozilla",
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+        "Operating System :: POSIX",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: MacOS :: MacOS X",
+        "Topic :: Software Development :: Quality Assurance",
+        "Topic :: Software Development :: Testing",
+        "Topic :: Utilities",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
+    ],
+)
