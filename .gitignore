@@ -1,3 +1,6 @@
 .eggs
 .python-version
+build
+dist
 *.egg-info
+*.xpi
