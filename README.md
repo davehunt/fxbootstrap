@@ -32,7 +32,7 @@ and the profile will be deleted.
 
 ## Installing add-ons
 
-Add-ons can be installed into the launched Firefox instance by passing one or more
+Add-ons can be installed into the Firefox instance by passing one or more
 paths to XPI file(s) on the command line:
 
 ```
