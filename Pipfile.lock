@@ -103,10 +103,11 @@
         },
         "halo": {
             "hashes": [
-                "sha256:b47d06f5d12d42473befb3ee88442f1cd0cfbec9a804c48ff83bc00f28dcd714"
+                "sha256:2cfdb50106f6d13ac45fcacbf4ba5b257f204ab8a717991bce44b5bfba8d464f",
+                "sha256:483cb9fc7e7c92e70389fe33eb4234b13fcbb841d7cf1c7be2e8c90cfb50c33e"
             ],
             "index": "pypi",
-            "version": "==0.0.18"
+            "version": "==0.0.21"
         },
         "idna": {
             "hashes": [
@@ -130,9 +131,9 @@
         },
         "mozdevice": {
             "hashes": [
-                "sha256:d7c05a9abe17bc582a3be8598a74e0aba5db8ac8b23436e382010301d0b800d2"
+                "sha256:02018fb841b17bd5b66e1780f642f36500c6a536bb2281ffe12003f54972cb9f"
             ],
-            "version": "==1.1.5"
+            "version": "==1.1.6"
         },
         "mozdownload": {
             "hashes": [
@@ -286,10 +287,10 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:41c3db2fc01e5b907288010dec72f9d0a74e37d6994e6eb56849f59fea2265ae",
-                "sha256:8819bba37a02d143296a4d032373c4dd4aca11f6d4c9973335ca75f9c8475f59"
+                "sha256:61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39",
+                "sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"
             ],
-            "version": "==1.24"
+            "version": "==1.24.1"
         }
     },
     "develop": {
