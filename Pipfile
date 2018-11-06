@@ -4,15 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-backports-tempfile = "*"
-click = "*"
 fxbootstrap = {editable = true, path = "."}
-mozdownload = "*"
-mozinstall = "*"
-mozrunner = "*"
-mozversion = "*"
-halo = "*"
-setuptools-scm = "*"
 
 [dev-packages]
 "flake8" = "*"

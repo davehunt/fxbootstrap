@@ -19,7 +19,6 @@ setup(
         "mozinstall",
         "mozrunner",
         "mozversion",
-        "setuptools-scm",
     ],
     setup_requires=["setuptools_scm"],
     license="Mozilla Public License 2.0 (MPL 2.0)",

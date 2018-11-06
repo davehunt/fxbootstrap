@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 
+from pkg_resources import get_distribution
+
 from backports import tempfile
 import click
 from halo import Halo
@@ -9,14 +11,13 @@ import mozlog
 from mozprofile import FirefoxProfile
 from mozrunner import FirefoxRunner
 import mozversion
-from setuptools_scm import get_version
 
 mozlog.commandline.setup_logging("mozversion", None, {})
 
 
 @click.command()
 @click.option("--addon", "-a", "addons", multiple=True, help="Path to Firefox add-on")
-@click.version_option(get_version())
+@click.version_option(get_distribution("fxbootstrap").version)
 def cli(addons):
     with tempfile.TemporaryDirectory() as tmpdir:
         build = download(dest=tmpdir)
