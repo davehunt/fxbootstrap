@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 
+import json
 from pkg_resources import get_distribution
 
 from backports import tempfile
@@ -17,12 +18,13 @@ mozlog.commandline.setup_logging("mozversion", None, {})
 
 @click.command()
 @click.option("--addon", "-a", "addons", multiple=True, help="Path to Firefox add-on")
+@click.option("--preferences", "preferences", help="Path to JSON with preferences")
 @click.version_option(get_distribution("fxbootstrap").version)
-def cli(addons):
+def cli(addons, preferences):
     with tempfile.TemporaryDirectory() as tmpdir:
         build = download(dest=tmpdir)
         binary = install(src=build, dest=tmpdir)
-        profile = generate_profile(addons=addons)
+        profile = generate_profile(addons=addons, preferences=preferences)
         launch(binary=binary, profile=profile)
 
 
@@ -43,10 +45,13 @@ def install(src, dest):
     return mozinstall.get_binary(path, "firefox")
 
 
-def generate_profile(addons):
+def generate_profile(addons=None, preferences=None):
+    if preferences is not None:
+        with open(preferences) as f:
+            preferences = json.load(f)
     spinner = Halo(text="Generating profile", spinner="dots")
     spinner.start()
-    profile = FirefoxProfile(addons=addons)
+    profile = FirefoxProfile(addons=addons, preferences=preferences)
     spinner.succeed("Generated profile at {}".format(profile.profile))
     return profile
 

@@ -11,7 +11,7 @@ setup(
     packages=find_packages(exclude=["tests"]),
     entry_points={"console_scripts": ["fxbootstrap=fxbootstrap:cli"]},
     install_requires=[
-        "backports-tempfile",
+        "backports.tempfile",
         "click",
         "crayons",
         "halo",
